@@ -1,0 +1,44 @@
+.hero
+  padding-top: 250px
+  padding-bottom: 250px
+  &-wrapper
+    position: relative
+  &-background
+    position: absolute
+    bottom: -100px
+    right: -130px
+    z-index: -1
+    max-width: 855px
+    max-heigh: 468px
+  &__title
+    max-width: 645px
+    margin-bottom: 50px
+    font-style: normal
+    font-weight: bold
+    font-size: 80px
+    line-height: 110%
+    color: $dark-primary
+  &__info
+    max-width: 380px
+    margin-top: 0
+    margin-bottom: 50px
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 29px
+    color: $dark-secondary
+    word-break: break-word
+  &-button
+    min-width: 170px
+    padding: 0 20px
+    background: $accent
+    border: 2px solid $accent
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 29px
+    color: $light-primary
+    &:hover
+      color: $accent
+      background: $light-primary
+      transition: color 0.3s ease, background 0.3s ease

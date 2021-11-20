@@ -1,0 +1,97 @@
+.header
+  padding-top: 25px
+  padding-bottom: 25px
+  position: fixed
+  width: 100%
+  z-index: 100
+  background: #F8FBFD
+  &-wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    min-height: 60px
+    width: 100%
+  &__logo
+    width: 49px
+    height: 35px
+    margin-right: 100px
+  &__nav
+    margin-right: auto
+  &__list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    margin-right: 20px
+    margin-left: 20px
+  &__link
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 26px
+    color: $dark-secondary
+    &:hover
+      color: $dark-primary
+  &-button
+    min-width: 210px
+    padding: 20px
+    background: $light-primary
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1)
+    &:hover
+      box-shadow: 0px 5px 5px rgba($accent, 0.4)
+      transition: box-shadow 0.3s ease
+
+    &__text
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 26px
+      letter-spacing: 0.005em
+      color: $dark-primary
+      word-break: break-word
+    &__icon
+      width: 20px
+      height: 14px
+      margin-left: 20px
+      fill: $accent
+
+  &-mmenu
+    position: absolute
+    top: 20px
+    right: 40px
+    z-index: 10
+    display: none
+    padding: 20px
+    border-radius: 20px
+    background-color: $accent
+    &--visible
+      display: block
+    &__list
+      list-style-type: none
+      margin: 0
+      padding: 0
+    &__item
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &__link
+      color: $light-primary
+      &:hover
+        text-decoration: underline
+  &__mmenuBtn
+    display: none
+    border: none
+    outline: none
+    background: none
+    cursor: pointer
+    .fas
+      font-size: 20px
+      color: $dark-primary
+    &--active
+      .fas
+        color: $accent

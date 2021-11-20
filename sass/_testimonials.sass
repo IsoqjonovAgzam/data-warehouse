@@ -1,0 +1,121 @@
+.testimonials
+  padding-bottom: 150px
+  border-bottom: 2px solid rgba($accent, 0.2)
+  &-wrapper
+    padding: 109px 0 60px 93px
+    background-color: $accent
+    border-radius: 50px
+  &__title
+    margin-bottom: 90px
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 130%
+    color: $light-primary
+  &__item
+    width: 645px
+    height: 340px
+    display: flex
+    padding: 60px 70px 50px
+    background: $light-primary
+    border-radius: 20px
+    border: 1px solid $accent
+    overflow: hidden
+    box-shadow: 0px 20px 0px rgba($dark-secondary, 0.3)
+  &__avatar
+    margin-right: 30px
+    min-width: 90px
+    width: 90px
+    height: 90px
+    object-fit: cover
+    border-radius: 50%
+  &__info
+    display: flex
+    flex-direction: column
+  &__name
+    display: inline-block
+    margin-top: 20px
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 160%
+    letter-spacing: 0.005em
+    color: $dark-primary
+    word-break: break-word
+  &__profession
+    display: inline-block
+    margin-bottom: 20px
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 160%
+    letter-spacing: 0.01em
+    color: $accent
+    word-break: break-word
+  &__text
+    margin-top: 0
+    margin-bottom: 0
+    max-height: 130px
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 180%
+    color: $dark-secondary
+    word-break: break-word
+    overflow-y: auto
+
+  &-buttons
+    position: absolute
+    bottom: 0
+    right: 75px
+    z-index: 5
+  &__button
+    display: inline-block
+    cursor: pointer
+    &--prev
+      margin-right: 15px
+    .fas
+      color: rgba($light-primary, 0.75)
+      &:hover
+        color: rgba($light-primary, 1)
+        transition: color 0.3s ease
+  .swiper
+    position: relative
+    &-slide
+      height: 400px
+      &-next
+        .testimonials
+          &__item
+            position: relative
+            &::after
+              content: ""
+              position: absolute
+              top: 0
+              left: 0
+              z-index: 5
+              width: 100%
+              height: 100%
+              background: linear-gradient(to right, rgba($light-primary, 0.01), rgba($light-primary, 0.75) 50%)
+    &-pagination
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 5
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      &-bullet
+        display: inline-block
+        width: 5px
+        height: 5px
+        margin: 0 10px
+        background: $light-primary
+        opacity: 1
+        &-active
+          width: 10px
+          height: 10px
+          background: #F063B8
+    &-container-horizontal
+      & > .swiper-pagination-bullets
+        .swiper-pagination-bullet
+          margin: 0 5px

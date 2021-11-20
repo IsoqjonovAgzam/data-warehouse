@@ -1,0 +1,127 @@
+.features
+  padding-bottom: 100px
+  &__title
+    margin-bottom: 50px
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 52px
+    text-align: center
+    color: $dark-primary
+  &__subtitle
+    margin: 0 auto 70px
+    max-width: 600px
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 29px
+    text-align: center
+    color: $dark-secondary
+    word-break: break-word
+
+  &-cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-card
+    width: 40%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 50px 50px 30px 170px
+    border-radius: 50px
+    &__title
+      position: relative
+      z-index: 5
+      margin-bottom: 20px
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      line-height: 31px
+      color: $dark-primary
+    &__text
+      position: relative
+      z-index: 5
+      margin-top: 0
+      margin-bottom: 20px
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 26px
+      color: $dark-secondary
+      word-break: break-word
+
+  &__card
+    position: relative
+    margin-bottom: 50px
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: cover
+    &::before
+      position: absolute
+      left: -90px
+      top: 50%
+      z-index: 2
+      transform: translateY(-50%)
+    &::after
+      position: absolute
+      z-index: 1
+    &--1
+      background-image: url(../images/cards-bg/card-01.png)
+      &::before
+        content: url(../images/cards-bg/card-image-01.png)
+      &::after
+        content: url(../images/cards-bg/card-figure-01.png)
+        top: -10px
+        right: 0
+    &--2
+      background-image: url(../images/cards-bg/card-02.png)
+      &::before
+        content: url(../images/cards-bg/card-image-02.png)
+      &::after
+        content: url(../images/cards-bg/card-figure-02.png)
+        bottom: -10px
+        right: 10px
+    &--3
+      background-image: url(../images/cards-bg/card-03.png)
+      &::before
+        content: url(../images/cards-bg/card-image-03.png)
+      &::after
+        content: url(../images/cards-bg/card-figure-03.png)
+        top: 10px
+        right: 10px
+    &--4
+      background-image: url(../images/cards-bg/card-04.png)
+      &::before
+        content: url(../images/cards-bg/card-image-04.png)
+      &::after
+        content: url(../images/cards-bg/card-figure-04.png)
+        top: -10px
+        right: 50px
+
+  &__button
+    margin-top: auto
+  &-button
+    position: relative
+    z-index: 5
+    display: flex
+    align-items: center
+    &:hover
+      .features
+        &-button
+          &__text
+            color: $accent
+            transition: color 0.3s ease
+    &__text
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 26px
+      letter-spacing: 0.005em
+      color: $dark-primary
+      word-break: break-word
+    &__icon
+      width: 20px
+      height: 14px
+      margin-left: 20px
+      fill: $accent
